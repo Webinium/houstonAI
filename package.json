@@ -1,0 +1,29 @@
+{
+  "name": "houston",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/solid-js": "^3.0.2",
+    "@astrojs/vercel": "^5.2.0",
+    "astro": "^3.5.4",
+    "eventsource-parser": "^1.1.1",
+    "highlight.js": "^11.9.0",
+    "katex": "^0.16.9",
+    "markdown-it": "^13.0.2",
+    "markdown-it-highlightjs": "^4.0.1",
+    "markdown-it-katex": "^2.0.3",
+    "openai": "^4.19.0",
+    "smartypants": "^0.2.2",
+    "solid-js": "^1.8.5",
+    "solidjs-use": "^2.3.0",
+    "undici": "^5.27.2"
+  }
+}

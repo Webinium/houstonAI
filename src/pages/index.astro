@@ -1,0 +1,56 @@
+---
+import BaseHead, { Props as Meta } from "../components/BaseHead.astro";
+import AstroLogo from "../components/AstroLogo.astro";
+import GithubLogo from "../components/GithubLogo.astro";
+import Houston from "../components/Houston.astro";
+import HoustonAI from "../components/HoustonAI.astro";
+import Notice from "../components/Notice.astro";
+import Generator from "../components/Generator.astro";
+import { model } from "../utils/generate";
+import "../global.css";
+import "katex/dist/katex.min.css";
+import "highlight.js/styles/tokyo-night-dark.css";
+export const prerender = true;
+
+const meta: Meta = {
+  siteName: "ChatGPT with HoustonAI",
+  description: "Minimal web UI for ChatGPT with HoustonAI interface.",
+  image: {
+    src: "/social.jpg",
+    alt: "Houston",
+  },
+};
+---
+
+<html lang="en">
+  <head>
+    <BaseHead {...meta} />
+  </head>
+  <body>
+    <AstroLogo />
+    <GithubLogo />
+    <header class="container">
+      <Houston glow />
+      <div class="intro">
+        <div class="intro-content">
+          <p class="intro-title">
+            <HoustonAI />
+          </p>
+          <p class="intro-subtitle">
+            Hi, I'm Houston, based on OpenAI API ({model}).<br>Feel free to ask me anything, I'll do my best to answer!
+          </p>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <ul class="chat"></ul>
+    </main>
+    <div class="container z-index-100">
+      <Notice />
+    </div>
+    <Generator />
+    <style>
+      @import "../global.css";
+    </style>
+  </body>
+</html>
