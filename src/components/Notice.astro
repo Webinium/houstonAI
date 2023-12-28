@@ -1,39 +1,4 @@
-<div class="footer">
-  <p>
-    This is a minimal web UI for ChatGPT with HoustonAI interface.<br>
-    Powered by <a href="https://astro.build/" target="_blank">Astro</a> and <a href="https://openai.com/api/" target="_blank">OpenAI API</a>.<br><br>
-    It is for personal, NON-COMMERCIAL purposes, and is NOT an OFFICIAL project of the Astro team.
-  </p>
-  <div class="links">
-    <a href="https://github.com/withastro/houston.astro.build" target="_blank"
-      >Learn More →
-    </a>
-    <a id="close-footer" href="#">
-      Close ✕
-    </a>
-  </div>
-</div>
 
-<script is:inline>
-  if (sessionStorage.getItem('notice:closed')) {
-    document.currentScript.previousElementSibling.remove();
-  }
-</script>
-
-<script>
-  if (typeof window !== "undefined") {
-    document.addEventListener("DOMContentLoaded", () => {
-      const close = document.querySelector('#close-footer');
-      if (close) {
-        close.addEventListener('click', (e) => {
-          e.preventDefault();
-          e.target.parentNode.parentNode.remove();
-          sessionStorage.setItem('notice:closed', 'true')
-        });
-      }
-    });
-  }
-</script>
 
 <style>
 
