@@ -25,7 +25,7 @@ import { generatePayload, parseOpenAIStream } from "../utils/generate";
 import type { APIRoute } from "astro";
 
 const apiKey = import.meta.env.OPENAI_API_KEY;
-const apiEndpoint = (import.meta.env.OPENAI_API_ENDPOINT || "https://api.openai.com/v1/chat/completions").trim().replace(/\/$/, "");
+const apiEndpoint = (import.meta.env.OPENAI_API_ENDPOINT || "https://api.fireworks.ai/inference/v1/chat/completions").trim().replace(/\/$/, "");
 
 export const POST: APIRoute = async (context) => {
   try {
